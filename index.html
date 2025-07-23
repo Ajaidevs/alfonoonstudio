@@ -319,7 +319,7 @@
 
         .contact-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 20px;
             font-size: 1.1rem;
         }
@@ -327,6 +327,13 @@
         .contact-item span {
             width: 30px;
             margin-right: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .contact-item .contact-text {
+            flex: 1;
+            line-height: 1.4;
         }
 
         .contact-item a {
@@ -532,19 +539,31 @@
                 <div class="contact-details">
                     <div class="contact-item">
                         <span>📧</span>
-                        <a href="mailto:info@alfonoonstudios.com">info@alfonoonstudios.com</a>
+                        <div class="contact-text">
+                            <a href="mailto:info@alfonoonstudios.com">info@alfonoonstudios.com</a>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <span>📱</span>
-                        <a href="tel:+971581973936">+971 58 197 3936 (Call/WhatsApp)</a>
+                        <div class="contact-text">
+                            <a href="tel:+971581973936">+971 58 197 3936</a><br>
+                            <small style="color: #999;">(Call/WhatsApp)</small>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <span>📞</span>
-                        <a href="tel:+97165207765">+971 06 520 7765 (Call only)</a>
+                        <div class="contact-text">
+                            <a href="tel:+97165207765">+971 06 520 7765</a><br>
+                            <small style="color: #999;">(Call only)</small>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <span>📍</span>
-                        <span>Alfonoon Digital Photography Studio, Near Abaya Roundabout, Al Rawda 2, Ajman</span>
+                        <div class="contact-text">
+                            Alfonoon Digital Photography Studio<br>
+                            Near Abaya Roundabout, Al Rawda 2<br>
+                            Ajman, UAE
+                        </div>
                     </div>
                 </div>
                 <a href="https://maps.app.goo.gl/MnnnZWz8hrqWWE9m8" target="_blank" class="map-link">VIEW LOCATION</a>
