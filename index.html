@@ -94,12 +94,12 @@
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
+            position: relative;
         }
 
         .hero-content {
@@ -149,6 +149,9 @@
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
+            background: #fff;
+            position: relative;
+            z-index: 10;
         }
 
         .about h2 {
@@ -171,6 +174,8 @@
         .services {
             background: #f8f8f8;
             padding: 180px 40px 120px 40px;
+            position: relative;
+            z-index: 10;
         }
 
         .services-container {
@@ -236,6 +241,9 @@
         /* Gallery Section */
         .gallery {
             padding: 180px 40px 120px 40px;
+            background: #fff;
+            position: relative;
+            z-index: 10;
         }
 
         .gallery-container {
@@ -278,6 +286,8 @@
             background: #000;
             color: white;
             padding: 180px 40px 120px 40px;
+            position: relative;
+            z-index: 10;
         }
 
         .contact-container {
@@ -361,6 +371,8 @@
             padding: 40px;
             font-size: 14px;
             letter-spacing: 1px;
+            position: relative;
+            z-index: 10;
         }
 
         /* Animations */
@@ -578,15 +590,6 @@
 
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
-        });
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
         });
     </script>
 </body>
